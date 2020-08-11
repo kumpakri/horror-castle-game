@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
+<script type="text/javascript" src="./howler/dist/howler.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+
+<img src="img/Scan008a.jpg" id="woman-image" width="100%">
+
+<script>
+    var screamSound = new Howl({
+      src: ['sound/scream.wav'],
+      loop: false,
+      volume: 0.5
+    });
+</script>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        localStorage.setItem("womanVisited", "true");
+        localStorage.setItem("doorSlam", "true");
+        const womanImage = document.querySelector("#woman-image");
+        womanImage.addEventListener("load", () => {
+            screamSound.play();
+            setTimeout(() => {  window.location.replace('upstairs.html'); }, 3000);
+        })
+        
+    });
+</script>

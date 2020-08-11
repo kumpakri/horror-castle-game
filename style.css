@@ -1,0 +1,12 @@
+area {
+    outline: none;
+}
+
+area#go-back:hover {
+    cursor: url("img/feet.png"), auto;
+}
+
+area:hover {
+    cursor: url("img/hand.png"), auto;
+}
+

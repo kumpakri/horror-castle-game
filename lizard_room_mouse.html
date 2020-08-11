@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
+<script type="text/javascript" src="./howler/dist/howler.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+
+<img src="img/Scan007a.jpg" id="mouse-image" width="100%" usemap="#image-map">
+
+<script>
+    var silenceSound = new Howl({
+        src: ['sound/silence.wav'],
+        loop: true,
+        volume: 0.8
+    });
+    var mouseSqeakSound = new Howl({
+        src: ['sound/mouse-squeek2.wav'],
+        loop: false,
+        volume: 0.5
+    });
+</script>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        silenceSound.play();
+
+        localStorage.setItem('mouseVisited', "true");
+        const womanImage = document.querySelector("#mouse-image");
+        womanImage.addEventListener("load", () => {
+            mouseSqeakSound.play();
+            setTimeout(() => {  window.location.replace('lizard_room.html'); }, 2000);
+        })
+    });
+</script>
