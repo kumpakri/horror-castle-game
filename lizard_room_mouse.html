@@ -2,7 +2,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="./howler/dist/howler.js"></script>
-<script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./resize_map.js"></script>
 <script type="text/javascript" src="./sounds.js"></script>
 
 <img src="img/Scan007a.jpg" id="mouse-image" width="100%" usemap="#image-map">
@@ -12,8 +12,8 @@
         silenceSound.play();
 
         localStorage.setItem('mouseVisited', "true");
-        const womanImage = document.querySelector("#mouse-image");
-        womanImage.addEventListener("load", () => {
+        const mouseImage = document.querySelector("#mouse-image");
+        mouseImage.addEventListener("load", () => {
             mouseSqeakSound.play();
             setTimeout(() => {  window.location.replace('lizard_room.html'); }, 2000);
         })

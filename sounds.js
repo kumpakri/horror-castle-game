@@ -88,6 +88,11 @@ var lockedDoorSound = new Howl({
     loop: false,
     volume: 1.0
 });
+var unlockingDoorSound = new Howl({
+    src: ['sound/unlocking-door.wav'],
+loop: false,
+volume: 1.0
+});
 var windowSound = new Howl({
     src: ['sound/door-squeek.wav'],
     loop: false,
@@ -100,6 +105,11 @@ var padlockSound = new Howl({
 });
 var carpetSound = new Howl({
     src: ['sound/carpet.mp3'],
+    loop: false,
+    volume: 0.5
+});
+var carpetStompSound = new Howl({
+    src: ['sound/carpet-stomp.mp3'],
     loop: false,
     volume: 0.5
 });
@@ -120,6 +130,16 @@ var bonesSound = new Howl({
 });
 var vultureSound = new Howl({
     src: ['sound/vulture.wav'],
+    loop: false,
+    volume: 0.5
+});
+var flappingSound = new Howl({
+    src: ['sound/flapping.mp3'],
+    loop: false,
+    volume: 0.5
+});
+var batSqueakSound = new Howl({
+    src: ['sound/bat-squeek.wav'],
     loop: false,
     volume: 0.5
 });
@@ -153,15 +173,50 @@ var pictureSound = new Howl({
     loop: false,
     volume: 1.0
 });
+var snareGreenSound = new Howl({
+    src: ['sound/snare-green.wav'],
+    loop: false,
+    volume: 1.0
+});
+var snareBlueSound = new Howl({
+    src: ['sound/snare-blue.wav'],
+    loop: false,
+    volume: 1.0
+});
+var snarePurpleSound = new Howl({
+    src: ['sound/snare-purple.wav'],
+    loop: false,
+    volume: 1.0
+});
+var snareOrangeSound = new Howl({
+    src: ['sound/snare-orange.wav'],
+    loop: false,
+    volume: 1.0
+});
 var screamSound = new Howl({
     src: ['sound/scream.wav'],
     loop: false,
     volume: 0.5
 });
+var girlScreamSound = new Howl({
+    src: ['sound/zombie-girl.wav'],
+loop: false,
+volume: 1.0
+});
 var mouseSqeakSound = new Howl({
     src: ['sound/mouse-squeek2.wav'],
     loop: false,
     volume: 0.5
+});
+var fuseSound = new Howl({
+    src: ['sound/fuse.wav'],
+    loop: false,
+    volume: 1.0
+});
+var bombSound = new Howl({
+    src: ['sound/bomb.mp3'],
+    loop: false,
+    volume: 1.0
 });
 var boilingSound = new Howl({
     src: ['sound/boiling-porridge.wav'],
@@ -191,6 +246,11 @@ var hummSound = new Howl({
 var songSound = new Howl({
     src: ['sound/sad-song.mp3'],
     loop: false,
+    volume: 0.1
+});
+var musicboxSound = new Howl({
+    src: ['sound/music-box-melody.wav'],
+    loop: true,
     volume: 0.1
 });
 var doorSlamSound = new Howl({

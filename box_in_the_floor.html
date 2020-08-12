@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
+<script type="text/javascript" src="./howler/dist/howler.js"></script>
+<script type="text/javascript" src="./sounds.js"></script>
+
+<img src="img/Scan009b.jpg" id="carpet-image" width="100%" usemap="#image-map">
+
+<map name="image-map">
+    <area id="take-key" target="" alt="take-key" title="" href="" coords="22,25,7005,4488" shape="rect">
+</map>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        $('map').imageMapResize();
+
+        silenceSound.play();
+        musicboxSound.play();
+        boxSound.play();
+
+        localStorage.setItem('carpetVisited', "true");
+
+        const takeKey = document.querySelector("#take-key");
+        takeKey.addEventListener("click", (e) => {
+                console.log("takeKey clicked!");
+                e.preventDefault();
+                localStorage.setItem('greenKey', "true");
+                snareGreenSound.play();
+                setTimeout(() => {  window.location.replace('girl_room.html'); }, 3000);
+        });
+
+    });
+</script>
