@@ -3,6 +3,7 @@
 <script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="./howler/dist/howler.js"></script>
 <script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./sounds.js"></script>
 
 <img src="img/Scan002.jpg" width="100%" id="myImgId" usemap="#image-map">
 
@@ -13,31 +14,6 @@
     <area id="dog-skeleton" target="" alt="dog-skeleton" title="" href="" coords="87,3753,1076,4068" shape="rect">
     <area id="guard-skeleton" target="" alt="guard-skeleton" title="" href="" coords="4790,2534,4565,3006,4610,3478,4278,3512,4306,4124,5211,4119,5278,3602,5076,3090,5278,2635" shape="poly">
 </map>
-
- 
-
-<script>
-    var rainSound = new Howl({
-      src: ['sound/rain.wav'],
-      loop: true,
-      volume: 0.5
-    });
-    var vultureSound = new Howl({
-      src: ['sound/vulture.wav'],
-      loop: false,
-      volume: 0.5
-    });
-    var doorSound = new Howl({
-      src: ['sound/door-creak.wav'],
-      loop: false,
-      volume: 0.5
-    });
-    var bonesSound = new Howl({
-      src: ['sound/bones.wav'],
-      loop: false,
-      volume: 0.5
-    });
-</script>
 
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +27,7 @@
         door.addEventListener("click", (e) => {
             console.log("door clicked!");
             e.preventDefault();
-            doorSound.play();
+            creakingDoorSound.play();
             setTimeout(() => {  window.location.replace('entryhall.html'); }, 8000);
         });
 
