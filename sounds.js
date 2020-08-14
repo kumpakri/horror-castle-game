@@ -13,6 +13,11 @@ var silenceSound = new Howl({
     loop: true,
     volume: 1.0
 });
+var fireSound = new Howl({
+    src: ['sound/fire.wav'],
+    loop: true,
+    volume: 1.0
+});
 var outdoorStepsSound = new Howl({
     src: ['sound/steps.wav'],
     loop: false,
