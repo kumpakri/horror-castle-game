@@ -148,6 +148,11 @@ var lidSound = new Howl({
     loop: false,
     volume: 0.5
 });
+var closeLidSound = new Howl({
+    src: ['sound/pot-lid-close.mp3'],
+    loop: false,
+    volume: 0.5
+});
 var pokeSound = new Howl({
     src: ['sound/poke1.wav'],
     loop: false,
