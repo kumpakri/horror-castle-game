@@ -13,6 +13,11 @@ var silenceSound = new Howl({
     loop: true,
     volume: 1.0
 });
+var basementSound = new Howl({
+    src: ['sound/basement.wav'],
+    loop: true,
+    volume: 0.5
+});
 var fireSound = new Howl({
     src: ['sound/fire.wav'],
     loop: true,
@@ -28,8 +33,18 @@ var stoneStepsSound = new Howl({
     loop: false,
     volume: 0.5
 });
+var echoStepsSound = new Howl({
+    src: ['sound/echo-steps.wav'],
+    loop: false,
+    volume: 0.5
+});
 var stairsSound = new Howl({
     src: ['sound/stair-steps.mp3'],
+    loop: false,
+    volume: 0.5
+});
+var basementStairsSound = new Howl({
+    src: ['sound/basement-stairs.wav'],
     loop: false,
     volume: 0.5
 });
@@ -228,6 +243,11 @@ var bombSound = new Howl({
     loop: false,
     volume: 1.0
 });
+var vampireSound = new Howl({
+    src: ['sound/roar.wav'],
+    loop: false,
+    volume: 1.0
+});
 var boilingSound = new Howl({
     src: ['sound/boiling-porridge.wav'],
     loop: true,
@@ -255,6 +275,11 @@ var hummSound = new Howl({
 });
 var songSound = new Howl({
     src: ['sound/sad-song.mp3'],
+    loop: false,
+    volume: 0.1
+});
+var evilLaughSound = new Howl({
+    src: ['sound/evil-laugh.wav'],
     loop: false,
     volume: 0.1
 });

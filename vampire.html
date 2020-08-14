@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
+<script type="text/javascript" src="./howler/dist/howler.js"></script>
+<script type="text/javascript" src="./sounds.js"></script>
+
+<img src="img/Scan017a.jpg" id="vampire-image" width="100%" usemap="#image-map">
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        const vampireImage = document.querySelector("#vampire-image");
+        vampireImage.addEventListener("load", () => {
+            vampireSound.play();
+            setTimeout(() => {  window.location.replace('index.html'); }, 3000);
+        })
+    });
+</script>
