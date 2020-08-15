@@ -2,11 +2,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="./image-map-resizer/js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="./howler/dist/howler.js"></script>
-<script type="text/javascript" src="./resize_map.js"></script>
 <script type="text/javascript" src="./sounds.js"></script>
 <script type="text/javascript" src="./show_keys.js"></script>
 
-<img src="img/Scan010a.jpg" height="100%" usemap="#image-map">
+<img src="img/Scan019b.jpg" id="basket-image" height="100%" usemap="#image-map">
 
 <map name="image-map">
     <area id="go-back" target="" alt="go-back" title="" href="" coords="22,25,7005,4488" shape="rect">
@@ -14,12 +13,12 @@
 
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
-        roomSound.play();
-        const goBack = document.querySelector("#go-back");
+        $('map').imageMapResize();        silenceSound.play();        localStorage.setItem('basketVisited', "true");        const goBack = document.querySelector("#go-back");
         goBack.addEventListener("click", (e) => {
-            console.log("goBack clicked!");
-            e.preventDefault();
-            window.location.replace('kitchenhall.html');
-        });
+                console.log("goBack clicked!");
+                e.preventDefault();
+                basketSound.play();
+                setTimeout(() => {  window.location.replace('torture_chamber.html'); }, 5000);
+        });    
     });
 </script>

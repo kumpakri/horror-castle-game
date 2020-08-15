@@ -4,13 +4,16 @@
 <script type="text/javascript" src="./howler/dist/howler.js"></script>
 <script type="text/javascript" src="./resize_map.js"></script>
 <script type="text/javascript" src="./sounds.js"></script>
+<script type="text/javascript" src="./show_keys.js"></script>
 
-<img src="img/Scan008a.jpg" id="woman-image" width="100%">
+<img src="img/Scan008a.jpg" id="woman-image" height="100%">
 
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
+
         localStorage.setItem("womanVisited", "true");
         localStorage.setItem("doorSlam", "true");
+        
         const womanImage = document.querySelector("#woman-image");
         womanImage.addEventListener("load", () => {
             screamSound.play();

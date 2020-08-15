@@ -4,8 +4,9 @@
 <script type="text/javascript" src="./howler/dist/howler.js"></script>
 <script type="text/javascript" src="./resize_map.js"></script>
 <script type="text/javascript" src="./sounds.js"></script>
+<script type="text/javascript" src="./show_keys.js"></script>
 
-<img src="img/Scan012c.jpg" width="100%" usemap="#image-map">
+<img src="img/Scan012c.jpg" height="100%" usemap="#image-map">
 
 <map name="image-map">
     <area id="go-back" target="" alt="go-back" title="" href="" coords="22,25,7005,4488" shape="rect">
@@ -15,12 +16,13 @@
     window.addEventListener("DOMContentLoaded", () => {
         roomSound.play();
         boilingSound.play();
+        
         const goBack = document.querySelector("#go-back");
         goBack.addEventListener("click", (e) => {
-                console.log("goBack clicked!");
-                e.preventDefault();
-                closeLidSound.play();
-                setTimeout(() => {  window.location.replace('kitchen.html'); }, 1000);
+            console.log("goBack clicked!");
+            e.preventDefault();
+            closeLidSound.play();
+            setTimeout(() => {  window.location.replace('kitchen.html'); }, 1000);
         });
     });
 </script>

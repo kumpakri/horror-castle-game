@@ -5,7 +5,7 @@
 <script type="text/javascript" src="./sounds.js"></script>
 <script type="text/javascript" src="./show_keys.js"></script>
 
-<img src="img/Scan022a.jpg" id="carpet-image" height="100%" usemap="#image-map">
+<img src="img/Scan019a.jpg" id="basket-image" height="100%" usemap="#image-map">
 
 <map name="image-map">
     <area id="take-key" target="" alt="take-key" title="" href="" coords="22,25,7005,4488" shape="rect">
@@ -14,17 +14,19 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         $('map').imageMapResize();
-        
+
         silenceSound.play();
-        
-        localStorage.setItem('chapelChestVisited', "true");
+
+        localStorage.setItem('basketVisited', "true");
+
         const takeKey = document.querySelector("#take-key");
         takeKey.addEventListener("click", (e) => {
-            console.log("takeKey clicked!");
-            e.preventDefault();
-            localStorage.setItem('orangeKey', "true");
-            snareOrangeSound.play();
-            setTimeout(() => {  window.location.replace('chapel.html'); }, 4000);
-        });    
+                console.log("takeKey clicked!");
+                e.preventDefault();
+                localStorage.setItem('purpleKey', "true");
+                snarePurpleSound.play();
+                setTimeout(() => {  window.location.replace('torture_chamber.html'); }, 5000);
+        });
+
     });
 </script>

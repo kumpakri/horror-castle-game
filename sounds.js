@@ -18,6 +18,11 @@ var basementSound = new Howl({
     loop: true,
     volume: 0.5
 });
+var theEndSound = new Howl({
+    src: ['sound/the-end.wav'],
+    loop: true,
+    volume: 0.5
+});
 var fireSound = new Howl({
     src: ['sound/fire.wav'],
     loop: true,
@@ -138,6 +143,11 @@ var boxSound = new Howl({
     loop: false,
     volume: 0.5
 });
+var basketSound = new Howl({
+    src: ['sound/basket.wav'],
+    loop: false,
+    volume: 0.5
+});
 var drippingSound = new Howl({
     src: ['sound/drip.wav'],
     loop: true,
@@ -160,6 +170,11 @@ var flappingSound = new Howl({
 });
 var batSqueakSound = new Howl({
     src: ['sound/bat-squeek.wav'],
+    loop: false,
+    volume: 0.5
+});
+var guillotineSound = new Howl({
+    src: ['sound/guillotine.wav'],
     loop: false,
     volume: 0.5
 });
@@ -266,17 +281,17 @@ var laughSound = new Howl({
 var childSound = new Howl({
     src: ['sound/creepy-child.mp3'],
     loop: false,
-    volume: 0.1
+    volume: 0.2
 });
 var hummSound = new Howl({
     src: ['sound/humming.wav'],
     loop: false,
-    volume: 0.1
+    volume: 0.2
 });
 var songSound = new Howl({
     src: ['sound/sad-song.mp3'],
     loop: false,
-    volume: 0.1
+    volume: 0.2
 });
 var evilLaughSound = new Howl({
     src: ['sound/evil-laugh.wav'],
