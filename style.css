@@ -10,3 +10,9 @@ area:hover {
     cursor: url("img/hand.png"), auto;
 }
 
+.key-container {
+    position: relative;
+    top: -135px;
+    left: 0px;
+    width: 30%;
+}
