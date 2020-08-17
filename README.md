@@ -3,6 +3,15 @@
 ## ABOUT
 When I was a child, I had this idea of creating a horror adventure game in powerpoint. I created all the artwork and had the locations connected inside the powerpoint but I couldn't figure out how to implement the key collecting and unlocking the doors based on collected keys. Fast forward some fifteen years later, I found the pictures when cleaning out my childhood room, so I'm going to finish the game now using HTML and JavaScript.
 
+## How to run
+Clone the project on your disc. Open the terminal inside the project folder. Run server from the project folder.
+
+    python -m http.server 8000
+
+In your internet browser open the localhost on the chosen port.
+
+    http://localhost:8000/
+
 ## Development
 
 For generation of the image-map was used the free online tool [Image Map Generator](https://www.image-map.net/). The code outputted from this tool was copied to the [generator.py](./generator.py) script to the `htmlMap` variable and used to generate a page template for the corresponding room, using the command shown below.
